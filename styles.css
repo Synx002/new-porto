@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Definisikan variabel warna di root */
+    --color-olive: #827A50;   
+    --color-bean: #CAC297; 
+    --color-third: #F5F3E9; 
+    --color-fourth: #151515; 
+}
+
+nav {
+    position: sticky; /* Make navbar sticky */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it is above other elements */
+}
+
+.abhaya-libre-regular {
+    font-family: "Abhaya Libre", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+  
+.abhaya-libre-medium {
+    font-family: "Abhaya Libre", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+  
+.abhaya-libre-semibold {
+    font-family: "Abhaya Libre", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+  
+.abhaya-libre-bold {
+    font-family: "Abhaya Libre", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+  
+.abhaya-libre-extrabold {
+    font-family: "Abhaya Libre", serif;
+    font-weight: 800;
+    font-style: normal;
+}
+  
+
+/* Font Styling */
+.syne-regular {
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+}
+
+/* Dropdown Styling */
+.custom-dropdown {
+    background-color: var(--color-third); /* Set background color to #F5F3E9 */
+    background-image: url('assets/arrow-down.png'); /* Custom icon for dropdown */
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 20px;
+    padding-right: 2.5rem; /* Adjust padding to fit icon */
+    -webkit-appearance: none; /* Remove default dropdown arrow */
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Date Picker Styling */
+.custom-date {
+    background-color: var(--color-third); /* Set background color to #F5F3E9 */
+    background-image: url('assets/plus.svg'); /* Custom icon for date picker */
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 20px;
+    padding-right: 2.5rem; /* Adjust padding to fit icon */
+    -webkit-appearance: none; /* Remove default icon in Webkit browsers */
+    -moz-appearance: none; /* Remove default icon in Firefox */
+    appearance: none;
+}
+
+/* Hide default calendar icon in Webkit browsers */
+.custom-date::-webkit-calendar-picker-indicator {
+    opacity: 0; /* Hides the default calendar icon */
+}
+
+/* Ensure custom icon doesn’t block clicks */
+.custom-date::after {
+    content: '';
+    pointer-events: none; /* Prevents the icon from blocking clicks */
+}
+
+
+/* General Styling for Form Inputs, Dropdown, and Date Picker */
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form select,
+form textarea {
+    background-color: var(--color-third); /* Set background color to #F5F3E9 */
+    border: 2px solid var(--color-olive); /* Border color #827A50 */
+    border-radius: 0; /* No border radius */
+    padding: 1rem;
+    color: var(--color-fourth); /* Text color */
+    outline: none; /* Remove default outline */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+    width: 100%; /* Full width for consistency */
+}
+
+/* Change Border Color on Focus for Input, Dropdown, and Date Picker */
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form input[type="date"]:focus,
+form select:focus,
+form textarea:focus {
+    border-color: var(--color-fourth); /* Border color on focus #151515 */
+}
+
+.btn-send{
+    background-color: var(--color-olive);
+}

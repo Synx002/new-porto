@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Syne&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+</head>
+<body class="bg-[#F5F3E9] px-20">
+
+
+    <nav class="flex justify-between items-center py-4 bg-[#F5F3E9]">
+        <div class="flex items-center">
+            <img src="../assets/nav-logo.svg" alt="Logo" class="h-10 w-10 mr-2">
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+            <a href="../index.html" class="hover:underline text-black syne-regular">About</a>
+            <a href="https://www.instagram.com" target="_blank">
+                <img src="../assets/ig-icon.svg" alt="Instagram" class="h-6 w-6">
+            </a>
+        </div>
+        <div class="md:hidden">
+            <button id="menu-toggle" class="focus:outline-none">
+                <img src="../assets/arrow-down.png" alt="">
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="md:hidden hidden">
+        <a href="../index.html" class="block px-4 py-2 hover:bg-blue-600">Home</a>
+        <a href="https://www.instagram.com" target="_blank" class="block px-4 py-2 hover:bg-blue-600">Instagram</a>
+    </div>
+
+    <section class="h-100dvh mx-auto py-6 flex flex-col align-middle lg:flex-row">
+        <!-- Container kiri (80%) -->
+            <div class="lg:w-3/5 w-full flex flex-col gap-8">
+                <!-- Container 1 (h1) -->
+                <div class="">
+                    <h1 class="text-3xl font-bold">Glad you stopped by, </h1>
+                </div>
+                <!-- Container 2 (Paragraf) -->
+                <div class="flex-2">
+                    <p class="text-lg text-gray-700">you’ve made it here, and I’m delighted to call you a friend—it's great to connect with you! I’m a passionate multidisciplinary UI/UX designer dedicated to crafting intuitive and engaging digital experiences. With a strong background in both visual design and user research, I bring a unique perspective to every project I undertake.</p>
+                </div>
+                <!-- Container 3 (2 container ke kanan) -->
+                <div class="flex flex-col md:flex-row gap-4">
+                    <div class="flex-1">
+                        <p class="text-gray-600">Over the years, I’ve had the privilege of collaborating with diverse teams across different divisions during my full-time job in ZeroOne Group.I am so grateful, it allowing me to hone my skills, sense of art, design taste, and in understanding user needs and translating them into elegant design solutions. My approach is user-centered and iterative, ensuring that each project reflects not only my design sensibilities but also the real-world needs of the users. I thrive on feedback and believe that the best designs emerge from collaboration, innovation, and a deep understanding of user behaviors.</p>
+                    </div>
+                    <div class="flex-1">
+                        <p class="text-gray-600">In addition to my design work, I’m a lifelong learner who enjoys staying up-to-date with the latest trends and technologies in the industry. Whether it's experimenting with new tools or diving into emerging design philosophies, I strive to continuously evolve my craft. When I’m not designing, you can find me working on my comic.</p>
+                    </div>
+                </div>
+            </div>
+    
+        <!-- Container kanan (20%) -->
+        <div class="lg:w-2/5 w-full py-4 flex items-center justify-end">
+            <img src="../assets/minij.jpg" alt="Gambar Placeholder" class="w-[400px] h-[549px] object-cover rounded-b-[300px] shadow-md">
+        </div>
+    </section>
+
+    <footer class="py-[120px] bg-[#F5F3E9]">
+        <!-- Container Let's Chat -->
+        <div class="flex flex-col gap-[31px]">
+            <h1 class="text-4xl fabhaya-libre-regular">Let's Chat!</h1>
+    
+            <!-- Container Form dan Info -->
+            <div class="flex flex-col justify-between md:flex-row gap-8">
+                <!-- Form -->
+                <form class="flex flex-col gap-4 md:w-1/2">
+                    <input type="text" placeholder="Name" class="p-4 border rounded-md">
+                    <input type="email" placeholder="Email" class="p-4 border rounded-md">
+                    <input type="text" placeholder="Cool Project" class="p-4 border rounded-md">
+    
+                    <!-- Dropdown for Best Budget -->
+                    <div class="relative">
+                        <select class="custom-dropdown p-4 w-full appearance-none">
+                            <option>Best Budget</option>
+                            <option value="500-1000">$500 - $1,000</option>
+                            <option value="1000-5000">$1,000 - $5,000</option>
+                            <option value="5000-10000">$5,000 - $10,000</option>
+                            <option value="10000+">Above $10,000</option>
+                        </select>
+                    </div>
+    
+                    <!-- Date Picker -->
+                    <div class="relative">
+                        <input type="date" class="custom-date p-4 w-full border rounded-md">
+                    </div>
+    
+                    <textarea placeholder="Comment" class="p-4 h-32"></textarea>
+    
+                    <button type="submit" class="btn-send py-3 px-6 text-white">Send</button>
+                </form>
+    
+                <!-- Right Section (Paragraf) -->
+                <div class="md:w-1/2 flex flex-col items-end gap-4 text-gray-700 max-w-[360px]">
+                    <p>Hey there, If you’re excited to team up, just whip up this quick form and spill the beans about your project! Share your grand vision, project scope/deliverables, timeline, and budget! — let's work together! The more detail, the more magic we can create! ✨</p>
+                    <p>I thrive on in UI/UX design, especially for stylish and artisanal brands, but I’m all ears for other fun projects too! Whether it’s merch design, illustration posters in that awesome manga/anime style, or even comic creation from the story development to finished artwork (please! this one is highly prefered projects now), I’d love to hear about it! And if you just want to drop a friendly “hi,” that’s totally welcome. <br> I always strive to get back to everyone, but since I get quite a few inquiries, I focus on projects that feel like the perfect match. Can’t wait to connect!</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+   
