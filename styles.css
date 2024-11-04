@@ -9,13 +9,17 @@
     --color-olive: #827A50;   
     --color-bean: #CAC297; 
     --color-third: #F5F3E9; 
-    --color-fourth: #151515; 
+    --color-coal: #151515; 
 }
 
 nav {
     position: sticky; /* Make navbar sticky */
     top: 0; /* Stick to the top */
     z-index: 1000; /* Ensure it is above other elements */
+}
+
+.hero{
+    height: calc(100vh - 72px);
 }
 
 .abhaya-libre-regular {
@@ -60,9 +64,18 @@ nav {
     font-size: 16px;
 }
 
+.syne-medium {
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 24px;
+}
+
 /* Dropdown Styling */
 .custom-dropdown {
     background-color: var(--color-third); /* Set background color to #F5F3E9 */
+    color: var(--color-bean); /* Text color */
     background-image: url('assets/arrow-down.png'); /* Custom icon for dropdown */
     background-repeat: no-repeat;
     background-position: right 1rem center;
@@ -76,6 +89,7 @@ nav {
 /* Date Picker Styling */
 .custom-date {
     background-color: var(--color-third); /* Set background color to #F5F3E9 */
+    color: var(--color-bean); /* Text color */
     background-image: url('assets/plus.svg'); /* Custom icon for date picker */
     background-repeat: no-repeat;
     background-position: right 1rem center;
@@ -105,13 +119,17 @@ form input[type="date"],
 form select,
 form textarea {
     background-color: var(--color-third); /* Set background color to #F5F3E9 */
-    border: 2px solid var(--color-olive); /* Border color #827A50 */
+    border: 2px solid var(--color-bean); /* Border color #827A50 */
     border-radius: 0; /* No border radius */
-    padding: 1rem;
-    color: var(--color-fourth); /* Text color */
+    color: var(--color-coal); /* Text color */
     outline: none; /* Remove default outline */
     transition: border-color 0.3s ease; /* Smooth transition for border color */
     width: 100%; /* Full width for consistency */
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
 }
 
 /* Change Border Color on Focus for Input, Dropdown, and Date Picker */
@@ -121,6 +139,26 @@ form input[type="date"]:focus,
 form select:focus,
 form textarea:focus {
     border-color: var(--color-fourth); /* Border color on focus #151515 */
+    color: var(--color-coal); /* Text color */
+}
+
+form input[type="text"]::placeholder,
+form input[type="email"]::placeholder,
+form input[type="date"]::placeholder,
+form select::placeholder,
+form textarea::placeholder {
+    color: var(--color-bean); /* Warna untuk placeholder */
+    opacity: 0.6; /* Atur opacity jika ingin placeholder terlihat lebih redup */
+}
+
+/* Change placeholder color on focus */
+form input[type="text"]:focus::placeholder,
+form input[type="email"]:focus::placeholder,
+form input[type="date"]:focus::placeholder,
+form select:focus::placeholder,
+form textarea:focus::placeholder {
+    color: var(--color-coal); /* Warna placeholder saat fokus */
+    opacity: 0.6; /* Atur opacity jika ingin lebih jelas saat fokus */
 }
 
 .btn-send{
