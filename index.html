@@ -13,7 +13,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 </head>
 <body class="bg-[#F5F3E9] px-20">
-
+    <div class="custom-cursor hidden">
+        <span>Take a Look</span>
+    </div>
     <nav class="flex justify-between items-center py-4 bg-[#F5F3E9]">
         <div class="flex items-center">
             <img src="assets/nav-logo.svg" alt="Logo" class="h-10 w-10 mr-2">
@@ -45,46 +47,49 @@
 
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 ">
         <div class="grid gap-4">
-            <div>
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
+            <div class="image-wrapper relative overflow-hidden">
+                <img class="hover-target h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="image-1">
+                <div class="overlay absolute inset-0 bg-olive/70 flex items-start p-4 opacity-0">
+                    <span class="text-white text-lg font-bold">Overlay Text</span>
+                </div>
             </div>
-            <div>
+            <div class="image-wrapper">
                 <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
             </div>
-            <div>
+            <div class="image-wrapper">
                 <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
             </div>
         </div>
         <div class="grid gap-4">
-            <div>
+            <div class="image-wrapper">
                 <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
             </div>
-            <div>
+            <div class="image-wrapper">
                 <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
             </div>
-            <div>
+            <div class="image-wrapper">
                 <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
             </div>
         </div>
         <div class="grid gap-4">
-            <div>
+            <div class="image-wrapper">
                 <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
             </div>
-            <div>
+            <div class="image-wrapper">
                 <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
             </div>
-            <div>
+            <div class="image-wrapper">
                 <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
             </div>
         </div>
         <div class="grid gap-4">
-            <div>
+            <div class="image-wrapper">
                 <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
             </div>
-            <div>
+            <div class="image-wrapper">
                 <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
             </div>
-            <div>
+            <div class="image-wrapper">
                 <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
             </div>
         </div>
@@ -94,7 +99,7 @@
     <footer class="py-[120px] bg-[#F5F3E9]">
         <!-- Container Let's Chat -->
         <div class="flex flex-col gap-[31px]">
-            <h1 class="text-8xl abhaya-regular">Let's Chat!</h1>
+            <h1 class="test text-8xl abhaya-regular">Let's Chat!</h1>
     
             <!-- Container Form dan Info -->
             <div class="flex flex-col justify-between md:flex-row gap-8">
@@ -164,6 +169,30 @@
 
 
     <script>
+        const cursor = document.querySelector('.custom-cursor');
+        const images = document.querySelectorAll('.image-wrapper img');
+
+        images.forEach(img => {
+            img.addEventListener('mouseenter', (e) => {
+                cursor.classList.remove('hidden');
+                cursor.classList.add('visible'); // Tambahkan kelas untuk menampilkan kursor
+                cursor.style.left = `${e.pageX}px`;
+                cursor.style.top = `${e.pageY}px`;
+                img.style.cursor = 'none'; // Sembunyikan kursor default
+            });
+            
+            img.addEventListener('mousemove', (e) => {
+                cursor.style.left = `${e.pageX}px`;
+                cursor.style.top = `${e.pageY}px`;
+            });
+            
+            img.addEventListener('mouseleave', () => {
+                cursor.classList.add('hidden');
+                img.style.cursor = 'auto'; // Kembalikan kursor default saat keluar
+            });
+        });
+
+
         const menuToggle = document.getElementById('menu-toggle');
         const mobileMenu = document.getElementById('mobile-menu');
 

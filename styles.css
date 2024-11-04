@@ -9,7 +9,8 @@
     --color-olive: #827A50;   
     --color-bean: #CAC297; 
     --color-third: #F5F3E9; 
-    --color-coal: #151515; 
+    --color-coal: #151515;
+    --cursor-size: 80px; 
 }
 
 nav {
@@ -76,6 +77,65 @@ nav {
     font-weight: 600;
 }
 
+.custom-cursor {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    background-color: var(--color-third);
+    border: 1px solid var(--color-olive);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 50;
+    transition: transform 0.3s ease, opacity 0.3s ease; 
+    opacity: 0; /* Awalnya tidak terlihat */
+    font-family: "Abhaya Libre", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.custom-cursor.visible {
+    transform: translate(-50%, -50%) scale(0.5); /* Tampilkan kursor dengan skala 1 */
+    opacity: 1; /* Menampilkan kursor khusus */
+    animation: scale-up 1s forwards; /* Memanggil animasi scale-up */
+}
+
+@keyframes scale-up {
+    0% {
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1); /* Skala akhir menjadi 2 */
+    }
+}
+
+.image-wrapper img {
+    cursor: none; /* Sembunyikan kursor default saat gambar di hover */
+}
+/* Overlay styling */
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-wrapper .overlay {
+    background-color: rgba(130, 122, 80, 0.7); /* Olive color overlay with #827A50 */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 0.5rem; /* 8px */
+}
+
+.image-wrapper:hover .overlay {
+    opacity: 1;
+}
 /* Dropdown Styling */
 .custom-dropdown {
     background-color: var(--color-third); /* Set background color to #F5F3E9 */
@@ -142,7 +202,6 @@ form input[type="email"]:focus,
 form input[type="date"]:focus,
 form select:focus,
 form textarea:focus {
-    border-color: var(--color-fourth); /* Border color on focus #151515 */
     color: var(--color-coal); /* Text color */
 }
 
