@@ -22,12 +22,10 @@ nav {
     height: calc(100vh - 72px);
 }
 
-.abhaya-libre-regular {
+.abhaya-regular {
     font-family: "Abhaya Libre", serif;
     font-optical-sizing: auto;
     font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
 }
   
 .abhaya-libre-medium {
@@ -72,6 +70,12 @@ nav {
     font-size: 24px;
 }
 
+.syne-semibold {
+    font-family: "Syne", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+}
+
 /* Dropdown Styling */
 .custom-dropdown {
     background-color: var(--color-third); /* Set background color to #F5F3E9 */
@@ -88,7 +92,7 @@ nav {
 
 /* Date Picker Styling */
 .custom-date {
-    background-color: var(--color-third); /* Set background color to #F5F3E9 */
+    background-color: var(--color-olive); /* Set background color to #F5F3E9 */
     color: var(--color-bean); /* Text color */
     background-image: url('assets/plus.svg'); /* Custom icon for date picker */
     background-repeat: no-repeat;
@@ -163,4 +167,8 @@ form textarea:focus::placeholder {
 
 .btn-send{
     background-color: var(--color-olive);
+}
+
+.label-2{
+    color: var(--color-olive);
 }

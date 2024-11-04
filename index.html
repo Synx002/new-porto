@@ -94,31 +94,32 @@
     <footer class="py-[120px] bg-[#F5F3E9]">
         <!-- Container Let's Chat -->
         <div class="flex flex-col gap-[31px]">
-            <h1 class="text-4xl fabhaya-libre-regular">Let's Chat!</h1>
+            <h1 class="text-8xl abhaya-regular">Let's Chat!</h1>
     
             <!-- Container Form dan Info -->
             <div class="flex flex-col justify-between md:flex-row gap-8">
                 <!-- Form -->
                 <form class="flex flex-col gap-4 md:w-1/2">
                     <div class="input">
-                        <label for="name" class="syne-regular text-xl">Name</label>
+                        <label for="name" class="syne-regular text-xl">your name please *</label>
                         <input id="name" type="text" placeholder="Name" class="p-3 border rounded-md">
                     </div>
                     
                     <div class="input">
-                        <label for="email" class="syne-regular text-xl">Email</label>
+                        <label for="email" class="syne-regular text-xl">your email of course *</label>
                         <input id="email" type="email" placeholder="Email" class="p-3 border rounded-md">
                     </div>
                     
                     <div class="input">
-                        <label for="project" class="syne-regular text-xl">Cool Project</label>
+                        <label for="project" class="syne-regular text-xl">the cool project *</label>
                         <input id="project" type="text" placeholder="Cool Project" class="p-3 border rounded-md">
                     </div>
                 
                     <div class="relative">
-                        <label for="budget" class="syne-regular text-xl">Best Budget</label>
+                        <label for="budget" class="syne-regular text-xl">your best budget *</label><br>
+                        <label for="budget" class="label-2 syne-regular text-xl">please do not lie!!! basic design projects start at minimum of $700</label>
                         <select id="budget" class="custom-dropdown p-3 w-full appearance-none">
-                            <option>Best Budget</option>
+                            <option>choose the range</option>
                             <option value="500-1000">$500 - $1,000</option>
                             <option value="1000-5000">$1,000 - $5,000</option>
                             <option value="5000-10000">$5,000 - $10,000</option>
@@ -127,13 +128,13 @@
                     </div>
                 
                     <div class="relative">
-                        <label for="date" class="syne-regular text-xl">Preferred Date</label>
+                        <label for="date" class="syne-regular text-xl">preferred date to start project *</label>
                         <input id="date" type="date" class="custom-date p-3 w-full border rounded-md">
                     </div>
                 
                     <div class="input">
-                        <label for="comment" class="syne-regular text-xl">Comment</label>
-                        <textarea id="comment" placeholder="Comment" class="p-3 h-32"></textarea>
+                        <label for="comment" class="syne-regular text-xl">why do you want work together?</label>
+                        <textarea id="comment" placeholder="type here" class="p-3 h-32"></textarea>
                     </div>
                 
                     <div class="btn-send flex justify-center items-center">
@@ -143,9 +144,18 @@
                 
     
                 <!-- Right Section (Paragraf) -->
-                <div class="md:w-1/2 flex flex-col items-end gap-4 text-gray-700 max-w-[360px]">
+                <div class="md:w-1/2 flex flex-col items-end gap-4 max-w-[360px] 2xl:max-w-[560px]">
                     <p class="text-2xl">Hey there, If you’re excited to team up, just whip up this quick form and spill the beans about your project! Share your grand vision, project scope/deliverables, timeline, and budget! — let's work together! The more detail, the more magic we can create! ✨</p>
-                    <p class="syne-regular text-base">I thrive on in UI/UX design, especially for stylish and artisanal brands, but I’m all ears for other fun projects too! Whether it’s merch design, illustration posters in that awesome manga/anime style, or even comic creation from the story development to finished artwork (please! this one is highly prefered projects now), I’d love to hear about it! And if you just want to drop a friendly “hi,” that’s totally welcome. <br> I always strive to get back to everyone, but since I get quite a few inquiries, I focus on projects that feel like the perfect match. Can’t wait to connect!</p>
+                    <p class="syne-regular text-base">I thrive on in UI/UX design, especially for stylish and artisanal brands, but I’m all ears for other fun projects too! Whether it’s 
+                        <span style="text-decoration: underline;">merch design</span>, 
+                        <span style="text-decoration: underline;">illustration posters</span> 
+                        in that awesome manga/anime style, or even comic creation from the story development to finished artwork 
+                        (
+                            <span class="syne-semibold">
+                                please! this one is highly prefered projects now
+                            </span>
+                        )
+                        , I’d love to hear about it! And if you just want to drop a friendly “hi,” that’s totally welcome. <br> I always strive to get back to everyone, but since I get quite a few inquiries, I focus on projects that feel like the perfect match. Can’t wait to connect!</p>
                 </div>
             </div>
         </div>
