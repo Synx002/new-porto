@@ -168,30 +168,42 @@
         </div>
     </footer>
 
+    <div class="page">
+        <div class="wrapper">
+            <h1></h1>
+        </div>
+    </div>
+
 
     <script>
-        const cursor = document.querySelector('.custom-cursor');
-        const images = document.querySelectorAll('.image-wrapper img');
+        // Pilih elemen custom cursor dan semua gambar di .image-wrapper
+const cursor = document.querySelector('.custom-cursor');
+const images = document.querySelectorAll('.image-wrapper img');
 
-        images.forEach(img => {
-            img.addEventListener('mouseenter', (e) => {
-                cursor.classList.remove('hidden');
-                cursor.classList.add('visible'); // Tambahkan kelas untuk menampilkan kursor
-                cursor.style.left = `${e.pageX}px`;
-                cursor.style.top = `${e.pageY}px`;
-                img.style.cursor = 'none'; // Sembunyikan kursor default
-            });
-            
-            img.addEventListener('mousemove', (e) => {
-                cursor.style.left = `${e.pageX}px`;
-                cursor.style.top = `${e.pageY}px`;
-            });
-            
-            img.addEventListener('mouseleave', () => {
-                cursor.classList.add('hidden');
-                img.style.cursor = 'auto'; // Kembalikan kursor default saat keluar
-            });
-        });
+// Fungsi untuk memperbarui posisi cursor dengan sedikit delay
+function updateCursorPosition(e) {
+    cursor.style.left = `${e.pageX}px`;
+    cursor.style.top = `${e.pageY}px`;
+}
+
+// Event listener untuk setiap gambar
+images.forEach(img => {
+    img.addEventListener('mouseenter', (e) => {
+        cursor.classList.remove('hidden'); // Hapus kelas hidden
+        cursor.classList.add('visible'); // Tampilkan cursor
+        updateCursorPosition(e); // Update posisi awal saat masuk
+    });
+
+    img.addEventListener('mousemove', (e) => {
+        // Tambahkan sedikit delay pada posisi agar mengikuti pointer dengan halus
+        requestAnimationFrame(() => updateCursorPosition(e));
+    });
+
+    img.addEventListener('mouseleave', () => {
+        cursor.classList.add('hidden'); // Sembunyikan cursor saat keluar dari gambar
+    });
+});
+
 
 
         const menuToggle = document.getElementById('menu-toggle');

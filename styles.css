@@ -125,18 +125,17 @@ nav {
     pointer-events: none;
     transform: translate(-50%, -50%);
     z-index: 50;
-    transition: transform 0.3s ease, opacity 0.3s ease; 
     opacity: 0; /* Awalnya tidak terlihat */
     font-family: "Abhaya Libre", serif;
     font-weight: 400;
     font-style: normal;
     font-size: 20px;
+    transition: top 0.1s ease, left 0.1s ease, opacity 0.3s ease; /* Transisi untuk delay pergerakan */
 }
 
 .custom-cursor.visible {
-    transform: translate(-50%, -50%) scale(0.5); /* Tampilkan kursor dengan skala 1 */
     opacity: 1; /* Menampilkan kursor khusus */
-    animation: scale-up 1s forwards; /* Memanggil animasi scale-up */
+    animation: scale-up 0.5s forwards; /* Memanggil animasi scale-up */
 }
 
 @keyframes scale-up {
@@ -148,9 +147,7 @@ nav {
     }
 }
 
-.image-wrapper img {
-    cursor: none; /* Sembunyikan kursor default saat gambar di hover */
-}
+
 /* Overlay styling */
 .image-wrapper {
     position: relative;
