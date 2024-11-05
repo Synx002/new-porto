@@ -19,9 +19,44 @@ nav {
     z-index: 1000; /* Ensure it is above other elements */
 }
 
-.hero{
-    height: calc(100vh - 72px);
+.hero {
+    position: relative; /* Untuk membuat paragraf dapat diposisikan absolut di dalamnya */
+    height: calc(100vh - 72px); /* Atur tinggi sesuai kebutuhan */
 }
+
+.hero-intro {
+    position: absolute;
+    right: 0%; /* Menggunakan persentase untuk responsivitas */
+    bottom: 12%; /* Menggunakan persentase untuk responsivitas */
+    color: var(--color-coal); /* Sesuaikan warna teks dengan skema warna */
+    font-family: "Abhaya Libre", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 24px; /* Ukuran teks untuk tampilan standar */
+    line-height: 28px;
+    letter-spacing: -3%;
+    max-width: 320px; /* Membatasi lebar teks agar tetap rapi */
+}
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 768px) {
+    .hero-intro {
+        font-size: 1rem; /* Mengurangi ukuran font di layar lebih kecil */
+        max-width: 90%; /* Lebar maksimum lebih besar untuk layar kecil */
+        right: 5%; /* Jarak dari kanan lebih besar */
+        bottom: 5%; /* Jarak dari bawah lebih besar */
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-intro {
+        font-size: 0.9rem; /* Mengurangi ukuran font lebih kecil untuk perangkat kecil */
+        max-width: 95%; /* Lebar maksimum lebih besar lagi untuk perangkat kecil */
+        right: 10%; /* Jarak dari kanan lebih besar */
+        bottom: 10%; /* Jarak dari bawah lebih besar */
+    }
+}
+
 
 .abhaya-regular {
     font-family: "Abhaya Libre", serif;
@@ -185,7 +220,6 @@ form textarea {
     background-color: var(--color-third); /* Set background color to #F5F3E9 */
     border: 2px solid var(--color-bean); /* Border color #827A50 */
     border-radius: 0; /* No border radius */
-    color: var(--color-coal); /* Text color */
     outline: none; /* Remove default outline */
     transition: border-color 0.3s ease; /* Smooth transition for border color */
     width: 100%; /* Full width for consistency */

@@ -39,10 +39,12 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="hero flex items-center justify-center bg-[#F5F3E9]">
+    <section class="hero flex items-center justify-center bg-[#F5F3E9] relative">
         <div class="w-[434px] h-[434px] bg-center bg-cover rounded-full" style="background-image: url('assets/hani.jpg');">
         </div>
+        <p class="hero-intro">I’m Nana, a multidisciplinary designer. I love to design stuffs, especially Website & App UI.</p>
     </section>
+    
 
 
     <div class="grid grid-cols-2 md:grid-cols-4 gap-4 ">
@@ -107,17 +109,17 @@
                 <form class="flex flex-col gap-4 md:w-1/2">
                     <div class="input">
                         <label for="name" class="syne-regular text-xl">your name please *</label>
-                        <input id="name" type="text" placeholder="Name" class="p-3 border rounded-md">
+                        <input id="name" type="text" placeholder="type here" class="p-3">
                     </div>
                     
                     <div class="input">
                         <label for="email" class="syne-regular text-xl">your email of course *</label>
-                        <input id="email" type="email" placeholder="Email" class="p-3 border rounded-md">
+                        <input id="email" type="email" placeholder="type here" class="p-3">
                     </div>
                     
                     <div class="input">
                         <label for="project" class="syne-regular text-xl">the cool project *</label>
-                        <input id="project" type="text" placeholder="Cool Project" class="p-3 border rounded-md">
+                        <input id="project" type="text" placeholder="type here" class="p-3">
                     </div>
                 
                     <div class="relative">
@@ -125,7 +127,7 @@
                         <label for="budget" class="label-2 syne-regular text-xl">please do not lie!!! basic design projects start at minimum of $700</label>
                         <select id="budget" class="custom-dropdown p-3 w-full appearance-none">
                             <option>choose the range</option>
-                            <option value="500-1000">$500 - $1,000</option>
+                            <option value="500-1000">$700 - $1,000</option>
                             <option value="1000-5000">$1,000 - $5,000</option>
                             <option value="5000-10000">$5,000 - $10,000</option>
                             <option value="10000+">Above $10,000</option>
@@ -134,13 +136,13 @@
                 
                     <div class="relative">
                         <label for="date" class="syne-regular text-xl">preferred date to start project *</label>
-                        <input id="date" type="date" class="custom-date p-3 w-full border rounded-md">
+                        <input id="date" type="date" class="custom-date p-3 w-full">
                     </div>
                 
                     <div class="input">
                         <label for="comment" class="syne-regular text-xl">why do you want work together?</label>
                         <textarea id="comment" placeholder="type here" class="p-3 h-32"></textarea>
-                    </div>
+                    </div>              
                 
                     <div class="btn-send flex justify-center items-center">
                         <button type="submit" class="py-3 px-6 text-white">Send</button>
@@ -165,7 +167,6 @@
             </div>
         </div>
     </footer>
-    
 
 
     <script>
