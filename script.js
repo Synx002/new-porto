@@ -20,3 +20,13 @@ document.addEventListener('mousemove', (e) => {
 })
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    const images = document.querySelectorAll('img');
+
+    images.forEach(image => {
+        const randomClass = 'rounded-random-' + (Math.floor(Math.random() * 4) + 1);
+        image.classList.add(randomClass);
+    });
+});
+
+

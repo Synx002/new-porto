@@ -88,62 +88,76 @@
         </div>
         <p class="hero-intro">I’m Nana, a multidisciplinary designer. I love to design stuffs, especially Website & App UI.</p>
     </section>
-    
-    
+
+    <!-- Section dengan gambar di tengah dan teks melingkar mengelilinginya -->
+    <section class="flex items-center justify-center h-screen bg-[#F5F3E9] relative">
+        <!-- Curved text mengelilingi lingkaran -->
+        <div class="absolute text-center curved-text">
+            <svg width="550" height="550" viewBox="0 0 550 550" class="transform -rotate-90">
+                <defs>
+                    <!-- Mengurangi sedikit radius lingkaran untuk memberikan jarak yang lebih dekat antara teks dan gambar -->
+                    <path id="circlePath" d="M 275, 275 m -230, 0 a 230,230 0 1,1 460,0 a 230,230 0 1,1 -460,0" />
+                </defs>
+                <text font-size="30" letter-spacing="15" fill="#333">
+                    <textPath href="#circlePath" text-anchor="middle" startOffset="50%">
+                        Hi, it’s happy to see you~
+                    </textPath>
+                </text>
+            </svg>
+        </div>
+        <!-- Image di tengah -->
+        <div class="flex items-center justify-center">
+            <img src="assets/hani.jpg" alt="profile" class="rounded-full w-96 h-96 object-cover">
+        </div>
+                <p class="hero-intro">I’m Nana, a multidisciplinary designer. I love to design stuffs, especially Website & App UI.</p>
+    </section>
 
 
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 ">
+
+
+
+
+
+
+
+
+
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
         <div class="grid gap-4">
-            <div class="image-wrapper relative overflow-hidden">
-                <img class="hover-target h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="image-1">
-                <div class="overlay absolute inset-0 bg-[#827A50]/70 flex items-start p-4 opacity-0 transition-opacity duration-300">
-                    <span class="text-white text-lg font-bold">Overlay Text</span>
-                </div>
-            </div>
-            <div class="image-wrapper relative overflow-hidden">
-                <img class="hover-target h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="image-1">
-                <div class="overlay absolute inset-0 bg-[#827A50]/70 flex items-start p-4 opacity-0 transition-opacity duration-300">
-                    <span class="text-white text-lg font-bold">Overlay Text</span>
-                </div>
+            <div class="image-wrapper">
+                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="">
             </div>
             <div class="image-wrapper">
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
+                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
+            </div>
+            <div class="image-wrapper">
+                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
             </div>
         </div>
         <div class="grid gap-4">
             <div class="image-wrapper">
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
+                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-3.jpg" alt="">
             </div>
             <div class="image-wrapper">
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
+                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-4.jpg" alt="">
             </div>
             <div class="image-wrapper">
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
+                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-5.jpg" alt="">
             </div>
         </div>
         <div class="grid gap-4">
             <div class="image-wrapper">
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
+                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg" alt="">
             </div>
             <div class="image-wrapper">
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
+                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-7.jpg" alt="">
             </div>
             <div class="image-wrapper">
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
+                <img class="h-auto max-w-full" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-8.jpg" alt="">
             </div>
         </div>
-        <div class="grid gap-4">
-            <div class="image-wrapper">
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-9.jpg" alt="">
-            </div>
-            <div class="image-wrapper">
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg" alt="">
-            </div>
-            <div class="image-wrapper">
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-11.jpg" alt="">
-            </div>
-        </div>
-    </div> 
+    </div>
+    
 
     <!-- Footer Section -->
     <footer class="py-[120px] bg-[#F5F3E9]">
@@ -252,6 +266,29 @@
         menuToggle.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+
+        document.addEventListener('DOMContentLoaded', () => {
+        const images = document.querySelectorAll('img');
+
+        images.forEach(image => {
+            const randomClass = 'rounded-random-' + (Math.floor(Math.random() * 4) + 1);
+            image.classList.add(randomClass);
+            });
+        });
+    
+
+        document.querySelectorAll('.image-wrapper').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const cursor = document.querySelector('.custom-cursor');
+                cursor.classList.add('visible');
+            });
+
+            item.addEventListener('mouseleave', () => {
+                const cursor = document.querySelector('.custom-cursor');
+                cursor.classList.remove('visible');
+            });
+        });
+
     </script>
 </body>
 </html>

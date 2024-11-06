@@ -113,6 +113,7 @@ nav {
     font-weight: 600;
 }
 
+/* Styling kursor kustom */
 .custom-cursor {
     position: absolute;
     width: 160px;
@@ -134,9 +135,10 @@ nav {
     transition: top 0.1s ease, left 0.1s ease, opacity 0.3s ease; /* Transisi untuk delay pergerakan */
 }
 
+/* Menampilkan kursor kustom saat hover */
 .custom-cursor.visible {
-    opacity: 1; /* Menampilkan kursor khusus */
-    animation: scale-up 0.5s forwards; /* Memanggil animasi scale-up */
+    opacity: 1;
+    animation: scale-up 0.5s forwards;
 }
 
 @keyframes scale-up {
@@ -144,24 +146,31 @@ nav {
         transform: translate(-50%, -50%) scale(0.5);
     }
     100% {
-        transform: translate(-50%, -50%) scale(1); /* Skala akhir menjadi 2 */
+        transform: translate(-50%, -50%) scale(1);
     }
 }
 
-
-/* Overlay styling */
+/* Hover Image Styling */
 .image-wrapper {
-    position: relative; /* Pastikan parent memiliki posisi relatif */
+    position: relative;
+    overflow: hidden;
 }
 
-.overlay {
-    opacity: 0; /* Mulai dengan overlay tidak terlihat */
-    transition: opacity 0.3s ease; /* Transisi yang halus untuk efek opacity */
+.image-wrapper img {
+    transition: filter 0.3s ease; /* Menambahkan efek filter untuk gambar */
 }
 
-.image-wrapper:hover .overlay {
-    opacity: 1; /* Tampilkan overlay saat hover */
+/* Efek warna pada gambar saat hover */
+.image-wrapper:hover img {
+    filter: brightness(0.5) sepia(1) hue-rotate(10deg); /* Sesuaikan warna sesuai kebutuhan */
 }
+
+.image-wrapper:hover .custom-cursor {
+    background-color: #827A50; /* Warna solid */
+    border-color: #827A50; /* Border mengikuti warna hover */
+    opacity: 1; /* Pastikan kursor selalu terlihat */
+}
+
 
 /* Dropdown Styling */
 .custom-dropdown {
@@ -340,3 +349,32 @@ form textarea:focus::placeholder {
         display: block;
     }
 }
+
+/* Mengatur gaya teks melengkung */
+.curved-text text {
+    fill: #333; /* Warna teks */
+}
+
+.curved-text textPath {
+    font-family: "Abhaya Libre", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+}
+
+/* Tambahkan beberapa kelas border radius */
+.rounded-random-1 {
+    border-radius: 32px 0px 0px 32px;
+}
+
+.rounded-random-2 {
+    border-radius: 0px 32px 32px 0px;
+}
+
+.rounded-random-3 {
+    border-radius: 32px 0px 0px 0px;
+}
+
+.rounded-random-4 {
+    border-radius: 0px 0px 32px 32px;
+}
+
