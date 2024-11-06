@@ -36,6 +36,7 @@ nav {
     line-height: 28px;
     letter-spacing: -3%;
     max-width: 320px; /* Membatasi lebar teks agar tetap rapi */
+    
 }
 
 /* Media Queries untuk Responsivitas */
@@ -150,24 +151,18 @@ nav {
 
 /* Overlay styling */
 .image-wrapper {
-    position: relative;
-    overflow: hidden;
+    position: relative; /* Pastikan parent memiliki posisi relatif */
 }
 
-.image-wrapper .overlay {
-    background-color: rgba(130, 122, 80, 0.7); /* Olive color overlay with #827A50 */
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding: 1rem;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    border-radius: 0.5rem; /* 8px */
+.overlay {
+    opacity: 0; /* Mulai dengan overlay tidak terlihat */
+    transition: opacity 0.3s ease; /* Transisi yang halus untuk efek opacity */
 }
 
 .image-wrapper:hover .overlay {
-    opacity: 1;
+    opacity: 1; /* Tampilkan overlay saat hover */
 }
+
 /* Dropdown Styling */
 .custom-dropdown {
     background-color: var(--color-third); /* Set background color to #F5F3E9 */
@@ -261,4 +256,87 @@ form textarea:focus::placeholder {
 
 .label-2{
     color: var(--color-olive);
+}
+
+.container-a {
+    height: 100vh;
+}
+
+.page {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bungkus {
+    width: 100%;
+    height: 100%;
+    max-width: 25rem;
+    max-height: 25rem;
+    box-shadow: .3rem .3rem .6rem rgba(0, 0, 0, .2),
+                -.3rem -.3rem .6rem rgba(255, 255, 255, .6);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bungkus img {
+    max-width: 100%; /* Agar gambar tidak melebihi ukuran .bungkus */
+    max-height: 100%;
+    border-radius: 50%; /* Opsional: Menjaga gambar tetap bulat jika ini yang diinginkan */
+}
+
+.description {
+    position: absolute;
+    animation: rotate 2s ease-out, rotate--inf 10s linear infinite 2s;
+}
+
+.description span {
+    height: 20rem;
+    width: 1rem;
+    position: absolute;
+    top: calc(50% - 20rem);
+    left: calc(50% - .5rem);
+    font-size: 2rem;
+    transform-origin: bottom center;
+    animation: fan 2s ease-out forwards;
+}
+
+@keyframes fan {
+    from {
+        transform: rotateZ(-90deg); /* Mulai dari -90 derajat untuk melingkar di atas */
+    }
+    to {
+        transform: rotateZ(calc(var(--i) * 13deg)); /* Hasil akhir 90 derajat (180/2) */
+    }
+}
+
+@keyframes rotate {
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+/* Tampilkan hero desktop hanya pada layar besar */
+.hero.desktop {
+    display: block;
+}
+
+.hero.mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* Sembunyikan hero desktop di layar kecil */
+    .hero.desktop {
+        display: none;
+    }
+    
+    /* Tampilkan hero mobile hanya di layar kecil */
+    .hero.mobile {
+        display: block;
+    }
 }

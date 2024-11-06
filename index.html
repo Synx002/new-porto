@@ -12,7 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 </head>
-<body class="bg-[#F5F3E9] px-20">
+<body class="bg-[#F5F3E9] px-10 md:px-20">
     <div class="custom-cursor hidden">
         <span>Take a Look</span>
     </div>
@@ -37,13 +37,58 @@
         <a href="pages/about.html" class="block px-4 py-2 hover:bg-blue-600">About</a>
         <a href="https://www.instagram.com" target="_blank" class="block px-4 py-2 hover:bg-blue-600">Instagram</a>
     </div>
+    
+    
+    
+    <!-- Hero Section Desktop -->
+    <section class="hero desktop flex items-center justify-center bg-[#F5F3E9] relative">
+        <div class="container-a">
+            <div class="page">
+                <div class="bungkus">
+                    <img src="assets/hani.jpg" alt="profile">
+                    <div class="description">
+                        <span style="--i:1">H</span>
+                        <span style="--i:2">i</span>
+                        <span style="--i:3">,</span>
+                        <span style="--i:4"> </span>
+                        <span style="--i:5">i</span>
+                        <span style="--i:6">t</span>
+                        <span style="--i:7">'</span>
+                        <span style="--i:8">s</span>
+                        <span style="--i:9"> </span>
+                        <span style="--i:10">h</span>
+                        <span style="--i:11">a</span>
+                        <span style="--i:12">p</span>
+                        <span style="--i:13">p</span>
+                        <span style="--i:14">y</span>
+                        <span style="--i:15"> </span>
+                        <span style="--i:16">t</span>
+                        <span style="--i:17">o</span>
+                        <span style="--i:18"> </span>
+                        <span style="--i:19">s</span>
+                        <span style="--i:20">e</span>
+                        <span style="--i:21">e</span>
+                        <span style="--i:22"> </span>
+                        <span style="--i:23">y</span>
+                        <span style="--i:24">o</span>
+                        <span style="--i:25">u</span>
+                        <span style="--i:26">~</span>
+                        <span style="--i:27"> </span>
+                        <span style="--i:28"> </span>
+                    </div>
+                </div>
+                <p class="hero-intro">I’m Nana, a multidisciplinary designer. I love to design stuffs, especially Website & App UI.</p>
+            </div>
+        </div>
+    </section>
 
-    <!-- Hero Section -->
-    <section class="hero flex items-center justify-center bg-[#F5F3E9] relative">
+    <!-- Hero Section mobile -->
+    <section class="hero flex items-center justify-center bg-[#F5F3E9] relative block md:hidden">
         <div class="w-[434px] h-[434px] bg-center bg-cover rounded-full" style="background-image: url('assets/hani.jpg');">
         </div>
         <p class="hero-intro">I’m Nana, a multidisciplinary designer. I love to design stuffs, especially Website & App UI.</p>
     </section>
+    
     
 
 
@@ -51,12 +96,15 @@
         <div class="grid gap-4">
             <div class="image-wrapper relative overflow-hidden">
                 <img class="hover-target h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image.jpg" alt="image-1">
-                <div class="overlay absolute inset-0 bg-olive/70 flex items-start p-4 opacity-0">
+                <div class="overlay absolute inset-0 bg-[#827A50]/70 flex items-start p-4 opacity-0 transition-opacity duration-300">
                     <span class="text-white text-lg font-bold">Overlay Text</span>
                 </div>
             </div>
-            <div class="image-wrapper">
-                <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="">
+            <div class="image-wrapper relative overflow-hidden">
+                <img class="hover-target h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg" alt="image-1">
+                <div class="overlay absolute inset-0 bg-[#827A50]/70 flex items-start p-4 opacity-0 transition-opacity duration-300">
+                    <span class="text-white text-lg font-bold">Overlay Text</span>
+                </div>
             </div>
             <div class="image-wrapper">
                 <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-2.jpg" alt="">
@@ -157,52 +205,44 @@
                         <span style="text-decoration: underline;">merch design</span>, 
                         <span style="text-decoration: underline;">illustration posters</span> 
                         in that awesome manga/anime style, or even comic creation from the story development to finished artwork 
-                        (
-                            <span class="syne-semibold">
-                                please! this one is highly prefered projects now
-                            </span>
-                        )
+                        (<span class="syne-semibold">please! this one is highly prefered projects now</span>)
                         , I’d love to hear about it! And if you just want to drop a friendly “hi,” that’s totally welcome. <br> I always strive to get back to everyone, but since I get quite a few inquiries, I focus on projects that feel like the perfect match. Can’t wait to connect!</p>
                 </div>
             </div>
         </div>
     </footer>
 
-    <div class="page">
-        <div class="wrapper">
-            <h1></h1>
-        </div>
-    </div>
+    
 
 
     <script>
         // Pilih elemen custom cursor dan semua gambar di .image-wrapper
-const cursor = document.querySelector('.custom-cursor');
-const images = document.querySelectorAll('.image-wrapper img');
+        const cursor = document.querySelector('.custom-cursor');
+        const images = document.querySelectorAll('.image-wrapper img');
 
-// Fungsi untuk memperbarui posisi cursor dengan sedikit delay
-function updateCursorPosition(e) {
-    cursor.style.left = `${e.pageX}px`;
-    cursor.style.top = `${e.pageY}px`;
-}
+        // Fungsi untuk memperbarui posisi cursor dengan sedikit delay
+        function updateCursorPosition(e) {
+            cursor.style.left = `${e.pageX}px`;
+            cursor.style.top = `${e.pageY}px`;
+        }
 
-// Event listener untuk setiap gambar
-images.forEach(img => {
-    img.addEventListener('mouseenter', (e) => {
-        cursor.classList.remove('hidden'); // Hapus kelas hidden
-        cursor.classList.add('visible'); // Tampilkan cursor
-        updateCursorPosition(e); // Update posisi awal saat masuk
-    });
+        // Event listener untuk setiap gambar
+        images.forEach(img => {
+            img.addEventListener('mouseenter', (e) => {
+                cursor.classList.remove('hidden'); // Hapus kelas hidden
+                cursor.classList.add('visible'); // Tampilkan cursor
+                updateCursorPosition(e); // Update posisi awal saat masuk
+            });
 
-    img.addEventListener('mousemove', (e) => {
-        // Tambahkan sedikit delay pada posisi agar mengikuti pointer dengan halus
-        requestAnimationFrame(() => updateCursorPosition(e));
-    });
+            img.addEventListener('mousemove', (e) => {
+                // Tambahkan sedikit delay pada posisi agar mengikuti pointer dengan halus
+                requestAnimationFrame(() => updateCursorPosition(e));
+            });
 
-    img.addEventListener('mouseleave', () => {
-        cursor.classList.add('hidden'); // Sembunyikan cursor saat keluar dari gambar
-    });
-});
+            img.addEventListener('mouseleave', () => {
+                cursor.classList.add('hidden'); // Sembunyikan cursor saat keluar dari gambar
+            });
+        });
 
 
 
