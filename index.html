@@ -109,18 +109,8 @@
         <div class="flex items-center justify-center">
             <img src="assets/hani.jpg" alt="profile" class="rounded-full w-96 h-96 object-cover">
         </div>
-                <p class="hero-intro">I’m Nana, a multidisciplinary designer. I love to design stuffs, especially Website & App UI.</p>
+        <p class="hero-intro">I’m Nana, a multidisciplinary designer. I love to design stuffs, especially Website & App UI.</p>
     </section>
-
-
-
-
-
-
-
-
-
-
 
     <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
         <div class="grid gap-4">
@@ -290,6 +280,21 @@
             });
         });
 
+        document.addEventListener('DOMContentLoaded', () => {
+        const dropdown = document.querySelector('.custom-dropdown');
+
+        dropdown.addEventListener('change', () => {
+                dropdown.classList.add('selected'); // Tambahkan class 'selected' ketika ada pilihan
+            });
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+        const dateInput = document.querySelector('.custom-date');
+
+        dateInput.addEventListener('change', () => {
+                dateInput.classList.add('selected'); // Tambahkan class 'selected' saat tanggal dipilih
+            });
+        });
     </script>
 </body>
 </html>

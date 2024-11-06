@@ -185,6 +185,9 @@ nav {
     -moz-appearance: none;
     appearance: none;
 }
+.custom-dropdown.selected {
+    color: var(--color-coal); /* Change text color to black when an option is selected */
+}
 
 /* Date Picker Styling */
 .custom-date {
@@ -198,6 +201,10 @@ nav {
     -webkit-appearance: none; /* Remove default icon in Webkit browsers */
     -moz-appearance: none; /* Remove default icon in Firefox */
     appearance: none;
+}
+
+.custom-date.selected {
+    color: var(--color-coal); /* Change text color to black when a date is selected */
 }
 
 /* Hide default calendar icon in Webkit browsers */
@@ -238,6 +245,7 @@ form input[type="date"]:focus,
 form select:focus,
 form textarea:focus {
     color: var(--color-coal); /* Text color */
+    border: 2px solid var(--color-coal); /* Border color #827A50 */
 }
 
 form input[type="text"]::placeholder,
@@ -256,7 +264,6 @@ form input[type="date"]:focus::placeholder,
 form select:focus::placeholder,
 form textarea:focus::placeholder {
     color: var(--color-coal); /* Warna placeholder saat fokus */
-    opacity: 0.6; /* Atur opacity jika ingin lebih jelas saat fokus */
 }
 
 .btn-send{
