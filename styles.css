@@ -27,7 +27,7 @@ nav {
 .hero-intro {
     position: absolute;
     right: 0%; /* Menggunakan persentase untuk responsivitas */
-    bottom: 12%; /* Menggunakan persentase untuk responsivitas */
+    bottom: 20%; /* Menggunakan persentase untuk responsivitas */
     color: var(--color-coal); /* Sesuaikan warna teks dengan skema warna */
     font-family: "Abhaya Libre", serif;
     font-optical-sizing: auto;
@@ -384,4 +384,21 @@ form textarea:focus::placeholder {
 .rounded-random-4 {
     border-radius: 0px 0px 32px 32px;
 }
+
+.curved-text svg {
+    animation: entranceRotate 2s ease-out forwards; /* Durasi 2 detik, berakhir di posisi final */
+}
+
+@keyframes entranceRotate {
+    from {
+        transform: rotate(360deg); /* Mulai dari rotasi 360 derajat */
+        opacity: 0;
+    }
+    to {
+        transform: rotate(-87deg); /* Berakhir di posisi normal (0 derajat) */
+        opacity: 1;
+    }
+}
+
+
 
