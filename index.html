@@ -41,7 +41,7 @@
     
     
     <!-- Hero Section Desktop -->
-    <section class="hero desktop flex items-center justify-center bg-[#F5F3E9] relative">
+    <!-- <section class="hero desktop flex items-center justify-center bg-[#F5F3E9] relative">
         <div class="container-a">
             <div class="page">
                 <div class="bungkus">
@@ -80,7 +80,7 @@
                 <p class="hero-intro">I’m Nana, a multidisciplinary designer. I love to design stuffs, especially Website & App UI.</p>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Hero Section mobile -->
     <section class="hero flex items-center justify-center bg-[#F5F3E9] relative block md:hidden">
@@ -203,14 +203,14 @@
                 
     
                 <!-- Right Section (Paragraf) -->
-                <div class="md:w-1/2 flex flex-col items-end gap-4 max-w-[360px] 2xl:max-w-[560px]">
-                    <p class="text-2xl">Hey there, If you’re excited to team up, just whip up this quick form and spill the beans about your project! Share your grand vision, project scope/deliverables, timeline, and budget! — let's work together! The more detail, the more magic we can create! ✨</p>
-                    <p class="syne-regular text-base">I thrive on in UI/UX design, especially for stylish and artisanal brands, but I’m all ears for other fun projects too! Whether it’s 
+                <div class="md:w-1/2 flex flex-col items-end gap-8 max-w-[380px]">
+                    <p class="text-2xl abhaya-regular tracking-[-0.25px] leading-[140%]">Hey there, If you’re excited to team up, just whip up this quick form and spill the beans about your project! Share your grand vision, project scope/<br>deliverables, timeline, and budget! —<br> let's work together! The more detail, the more magic we can create! ✨</p>
+                    <p class="syne-regular text-[16px] leading-[150%] tracking-[0%]">I thrive on in UI/UX design, especially for stylish and artisanal brands, but I’m all ears for other fun<br>projects too! Whether it’s 
                         <span style="text-decoration: underline;">merch design</span>, 
                         <span style="text-decoration: underline;">illustration posters</span> 
-                        in that awesome manga/anime style, or even comic creation from the story development to finished artwork 
-                        (<span class="syne-semibold">please! this one is highly prefered projects now</span>)
-                        , I’d love to hear about it! And if you just want to drop a friendly “hi,” that’s totally welcome. <br> I always strive to get back to everyone, but since I get quite a few inquiries, I focus on projects that feel like the perfect match. Can’t wait to connect!</p>
+                        in that awesome manga/anime style, or<br>even comic creation from the story development to finished artwork 
+                        (<span class="syne-semibold">please! this one is highly<br>prefered projects now</span>)
+                        , I’d love to hear about<br>it! And if you just want to drop a friendly “hi,” that’s totally welcome.</p>
                 </div>
             </div>
         </div>
@@ -218,83 +218,6 @@
 
     
 
-
-    <script>
-        // Pilih elemen custom cursor dan semua gambar di .image-wrapper
-        const cursor = document.querySelector('.custom-cursor');
-        const images = document.querySelectorAll('.image-wrapper img');
-
-        // Fungsi untuk memperbarui posisi cursor dengan sedikit delay
-        function updateCursorPosition(e) {
-            cursor.style.left = `${e.pageX}px`;
-            cursor.style.top = `${e.pageY}px`;
-        }
-
-        // Event listener untuk setiap gambar
-        images.forEach(img => {
-            img.addEventListener('mouseenter', (e) => {
-                cursor.classList.remove('hidden'); // Hapus kelas hidden
-                cursor.classList.add('visible'); // Tampilkan cursor
-                updateCursorPosition(e); // Update posisi awal saat masuk
-            });
-
-            img.addEventListener('mousemove', (e) => {
-                // Tambahkan sedikit delay pada posisi agar mengikuti pointer dengan halus
-                requestAnimationFrame(() => updateCursorPosition(e));
-            });
-
-            img.addEventListener('mouseleave', () => {
-                cursor.classList.add('hidden'); // Sembunyikan cursor saat keluar dari gambar
-            });
-        });
-
-
-
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        document.addEventListener('DOMContentLoaded', () => {
-        const images = document.querySelectorAll('.image-wrapper img'); // Memilih hanya gambar dalam .image-wrapper
-
-        images.forEach(image => {
-                const randomClass = 'rounded-random-' + (Math.floor(Math.random() * 4) + 1);
-                image.classList.add(randomClass);
-            });
-        });
-
-    
-
-        document.querySelectorAll('.image-wrapper').forEach(item => {
-            item.addEventListener('mouseenter', () => {
-                const cursor = document.querySelector('.custom-cursor');
-                cursor.classList.add('visible');
-            });
-
-            item.addEventListener('mouseleave', () => {
-                const cursor = document.querySelector('.custom-cursor');
-                cursor.classList.remove('visible');
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', () => {
-        const dropdown = document.querySelector('.custom-dropdown');
-
-        dropdown.addEventListener('change', () => {
-                dropdown.classList.add('selected'); // Tambahkan class 'selected' ketika ada pilihan
-            });
-        });
-
-        document.addEventListener('DOMContentLoaded', () => {
-        const dateInput = document.querySelector('.custom-date');
-
-        dateInput.addEventListener('change', () => {
-                dateInput.classList.add('selected'); // Tambahkan class 'selected' saat tanggal dipilih
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
