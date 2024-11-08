@@ -21,7 +21,7 @@ nav {
 
 .hero {
     position: relative; /* Untuk membuat paragraf dapat diposisikan absolut di dalamnya */
-    height: calc(100vh - 72px); /* Atur tinggi sesuai kebutuhan */
+    height: calc(100vh - 112px); /* Atur tinggi sesuai kebutuhan */
 }
 
 .hero-intro {
